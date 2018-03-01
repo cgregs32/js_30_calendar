@@ -27,11 +27,10 @@ const PageWrapper = styled.div`
 class Calendar extends React.Component {
 
   generateCalendar = () => {
-    let myDivs = [];
-    for(let i = 0; i < 30; i++){
-      myDivs.push(<div key={i}></div>)
-    }
-    return myDivs
+    return calendarData.map((day, i) => {
+      debugger
+      return <Link to={day.link} key={i} />
+    })
   }
 
   render () {

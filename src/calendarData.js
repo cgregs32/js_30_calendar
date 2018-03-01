@@ -1,9 +1,7 @@
 const calendaData = [
   {
-    clock: {
-      link: '/challenge_1',
+      link: '/clock',
       image: ''
-    }
   }
 ];
 
