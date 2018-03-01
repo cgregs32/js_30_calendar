@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Segment, Header } from 'semantic-ui-react'
+import calendarData from '../calendarData'
+import { Link } from 'react-router-dom'
+
 
 const PageWrapper = styled.div`
   .calendarStyle{
@@ -15,7 +18,7 @@ const PageWrapper = styled.div`
   div:nth-child(odd){
     background-color: yellow;
   }
-  
+
   h1{
     text-align: center;
   }
