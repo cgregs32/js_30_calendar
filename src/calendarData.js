@@ -4,6 +4,10 @@ const calendaData = [
   {
       link: '/clock',
       image: clock
+  },
+  {
+      link: '/drums',
+      image: ''
   }
 ];
 

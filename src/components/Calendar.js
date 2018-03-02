@@ -28,16 +28,16 @@ class Calendar extends React.Component {
 
   generateCalendar = () => {
     return calendarData.map((day, i) => {
-      return <Image as={Link} to={day.link} key={i} />
+      return <Image as={Link} src={day.image} to={day.link} key={i} />
     })
   }
 
   render () {
     return(
-      <PageWrapper basic>
+      <PageWrapper>
         <Icon as={Link} to='/' name='arrow circle left' />
         <Segment as='h1'>Javascript 30 Challenge</Segment>
-        <Segment className='calendarStyle'>
+        <Segment basic className='calendarStyle'>
           {this.generateCalendar()}
         </Segment>
       </PageWrapper>
