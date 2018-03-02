@@ -1,7 +1,9 @@
+import clock from './images/clock.png'
+
 const calendaData = [
   {
       link: '/clock',
-      image: ''
+      image: clock
   }
 ];
 

@@ -61,6 +61,15 @@ const Container = styled.div`
 
 class Clock extends React.Component {
 
+  componentDidMount(){
+    const intervalID = setInterval(this.setDate, 1000)
+    this.setState({ intervalID: intervalID })
+  }
+
+  componentWillUnmount(){
+    clearInterval(this.state.intervalID)
+  }
+
   formatSeconds = (now) => {
     let secondHand = this.refs.secondHand
     let seconds = now.getSeconds();
@@ -89,16 +98,16 @@ class Clock extends React.Component {
   }
 
   render () {
-    setInterval(this.setDate, 1000)
+
     return(
       <Container>
-      <div className="clock">
-        <div className="clock-face">
-          <div ref="hourHand" className="hand hour-hand"></div>
-          <div ref="minHand" className="hand min-hand"></div>
-          <div ref="secondHand" className="hand second-hand"></div>
+        <div className="clock">
+          <div className="clock-face">
+            <div ref="hourHand" className="hand hour-hand"></div>
+            <div ref="minHand" className="hand min-hand"></div>
+            <div ref="secondHand" className="hand second-hand"></div>
+          </div>
         </div>
-      </div>
       </Container>
     )
   }

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Segment, Header } from 'semantic-ui-react'
+import { Segment, Header, Icon, Image } from 'semantic-ui-react'
 import calendarData from '../calendarData'
 import { Link } from 'react-router-dom'
 
@@ -28,14 +28,14 @@ class Calendar extends React.Component {
 
   generateCalendar = () => {
     return calendarData.map((day, i) => {
-      debugger
-      return <Link to={day.link} key={i} />
+      return <Image as={Link} to={day.link} key={i} />
     })
   }
 
   render () {
     return(
       <PageWrapper basic>
+        <Icon as={Link} to='/' name='arrow circle left' />
         <Segment as='h1'>Javascript 30 Challenge</Segment>
         <Segment className='calendarStyle'>
           {this.generateCalendar()}
