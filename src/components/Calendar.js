@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Segment, Header, Icon, Image } from 'semantic-ui-react'
+import { Segment, Icon, Image } from 'semantic-ui-react'
 import calendarData from '../calendarData'
 import { Link } from 'react-router-dom'
 

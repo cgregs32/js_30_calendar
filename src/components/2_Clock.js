@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import GoBack from './GoBack'
 
 const Container = styled.div`
 
@@ -9,7 +10,6 @@ const Container = styled.div`
     text-align: center;
     font-size: 10px;
     height: 100vh;
-    padding-top: 100px;
 
 
   body {
@@ -101,6 +101,7 @@ class Clock extends React.Component {
 
     return(
       <Container>
+        <GoBack />
         <div className="clock">
           <div className="clock-face">
             <div ref="hourHand" className="hand hour-hand"></div>

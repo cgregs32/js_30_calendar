@@ -1,6 +1,8 @@
 import React from 'react';
 import keys from '../data/1_Drums_data';
 import styled from 'styled-components';
+import GoBack from './GoBack'
+
 
 const Container = styled.div`
   font-size: 10px;
@@ -106,6 +108,7 @@ class Drums extends React.Component {
   render() {
     return (
       <Container>
+        <GoBack />
         <div className="keys">
           {this.createKeys()}
           {this.createAudio()}
