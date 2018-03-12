@@ -5,7 +5,6 @@ import Drums from './components/1_Drums';
 import Clock from './components/2_Clock';
 import Variables from './components/3_Variables';
 import Cardio1 from './components/4_Cardio1';
-import { Icon } from 'semantic-ui-react'
 
 class App extends Component {
   render() {
