@@ -6,6 +6,7 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   text-align: left;
   padding: 3% 0 0 3%;
+  position: absolute;
   color: white;
   i{
     color: white;

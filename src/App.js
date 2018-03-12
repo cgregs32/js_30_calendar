@@ -5,6 +5,7 @@ import Drums from './components/1_Drums';
 import Clock from './components/2_Clock';
 import Variables from './components/3_Variables';
 import Cardio1 from './components/4_Cardio1';
+import Flex from './components/5_Flex';
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
         <Route exact path="/drums" component={Drums} />
         <Route exact path="/variables" component={Variables} />
         <Route exact path="/cardio1" component={Cardio1} />
+        <Route exact path="/flex" component={Flex} />
       </Switch>
     );
   }

@@ -24,6 +24,10 @@ img{
   background: ${ (props) => props.children[2]._self.state.base };
   filter: blur(${ (props) => props.children[2]._self.state.blur }px);
 }
+h2{
+  padding-top: 2%;
+  margin: 0 0 3% 0;
+}
 
 .hl{
   color: ${ (props) => props.children[0]._self.state.base };
@@ -49,16 +53,16 @@ class Variables extends React.Component {
 
         <div className="controls">
           <label htmlFor="spacing">Spacing:</label>
-          <input onChange={this.handleChange} id="spacing" type="range" name="spacing" min="10" max="200" value={spacing} data-sizing="px" />
+          <input onChange={this.handleChange} type="range" name="spacing" min="10" max="200" value={spacing} />
 
           <label htmlFor="blur">Blur:</label>
-          <input onChange={this.handleChange} id="blur" type="range" name="blur" min="0" max="25" value={blur} data-sizing="px" />
+          <input onChange={this.handleChange} type="range" name="blur" min="0" max="25" value={blur} />
 
           <label htmlFor="base">Base Color</label>
-          <input onChange={this.handleChange} id="base" type="color" name="base" value={base} />
+          <input onChange={this.handleChange} type="color" name="base" value={base} />
         </div>
 
-        <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500" />
+        <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500" alt='changes when sliders move'/>
 
       </Container>
     )
