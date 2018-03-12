@@ -2,9 +2,11 @@ import React from 'react';
 import { Table, Header, Button } from 'semantic-ui-react';
 import { inventors, people } from '../data/4_Cardio1';
 import styled from 'styled-components';
+import GoBack from './GoBack'
 
 const Wrapper = styled.div`
-  padding: 0 7% 0 7%;
+  background: linear-gradient(#4AC29A, #4AC29A);
+  padding: 3% 7% 0 7%;
 `;
 
 class Cardio1 extends React.Component {
@@ -70,6 +72,7 @@ class Cardio1 extends React.Component {
   render() {
     return (
       <Wrapper className="container">
+        <GoBack />
         <Table celled fixed singleLine>
           <Table.Header>
             <Table.Row>{this.generateHeaders()}</Table.Row>
