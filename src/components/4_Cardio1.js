@@ -2,10 +2,10 @@ import React from 'react';
 import { Table, Header, Button } from 'semantic-ui-react';
 import { inventors } from '../data/4_Cardio1';
 import styled from 'styled-components';
-import GoBack from './GoBack'
+import GoBack from './GoBack';
 
 const Wrapper = styled.div`
-  background: linear-gradient(#4AC29A, #4AC29A);
+  background: linear-gradient(#4ac29a, #4ac29a);
   padding: 5% 7% 0 7%;
 `;
 
@@ -45,29 +45,29 @@ class Cardio1 extends React.Component {
   };
 
   answer_3 = () => {
-    const filtered = inventors.sort((a,b) => {
-      return a.year > b.year ? 1 : -1
-    })
-    this.setState({ filtered: filtered })
-  }
+    const filtered = inventors.sort((a, b) => {
+      return a.year > b.year ? 1 : -1;
+    });
+    this.setState({ filtered: filtered });
+  };
 
   answer_4 = () => {
     return inventors.map(inventor => {
-      return(
+      return (
         <li>
           {inventor.first + ' ' + inventor.last}
-           | age: {inventor.passed - inventor.year} |
+          | age: {inventor.passed - inventor.year} |
         </li>
-      )
+      );
     });
-  }
+  };
 
   answer_5 = () => {
-    const filtered = inventors.sort((a,b) => {
-      return a.passed - a.year > b.passed - b.year ? 1 : -1
-    })
-    this.setState({ filtered: filtered })
-  }
+    const filtered = inventors.sort((a, b) => {
+      return a.passed - a.year > b.passed - b.year ? 1 : -1;
+    });
+    this.setState({ filtered: filtered });
+  };
 
   render() {
     return (
@@ -101,16 +101,12 @@ class Cardio1 extends React.Component {
             <Button onClick={this.answer_3}>Go!</Button>
           </div>
           <div>
-            <Header>
-              4. How many years did all the inventors live?
-            </Header>
+            <Header>4. How many years did all the inventors live?</Header>
             <Button onClick={() => this.setState({ ans4: true })}>Go!</Button>
             <ul>{this.state.ans4 && this.answer_4()}</ul>
           </div>
           <div>
-            <Header>
-              5. Sort the inventors by years lived
-            </Header>
+            <Header>5. Sort the inventors by years lived</Header>
             <Button onClick={this.answer_5}>Go!</Button>
           </div>
         </Wrapper>

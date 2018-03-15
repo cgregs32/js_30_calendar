@@ -1,16 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import GoBack from './GoBack'
-
+import GoBack from './GoBack';
 
 const Wrapper = styled.div`
-
-    box-sizing: border-box;
-    background: #ffc600;
-    font-family: 'helvetica neue';
-    font-size: 20px;
-    font-weight: 200;
-    margin: 0;
+  box-sizing: border-box;
+  background: #ffc600;
+  font-family: 'helvetica neue';
+  font-size: 20px;
+  font-weight: 200;
+  margin: 0;
   *,
   *:before,
   *:after {
@@ -69,10 +67,18 @@ const Wrapper = styled.div`
     align-items: center;
   }
 
-  .panel > *:first-child { transform: translateY(-100%); }
-  .panel.open-active > *:first-child { transform: translateY(0); }
-  .panel > *:last-child { transform: translateY(100%); }
-  .panel.open-active > *:last-child { transform: translateY(0); }
+  .panel > *:first-child {
+    transform: translateY(-100%);
+  }
+  .panel.open-active > *:first-child {
+    transform: translateY(0);
+  }
+  .panel > *:last-child {
+    transform: translateY(100%);
+  }
+  .panel.open-active > *:last-child {
+    transform: translateY(0);
+  }
 
   .panel p {
     text-transform: uppercase;
@@ -91,39 +97,40 @@ const Wrapper = styled.div`
 `;
 
 class Flex extends React.Component {
-
-  handleClick = (e) => {
-    const element = e.currentTarget
-    element.classList.toggle('open')
-    setTimeout( () => element.classList.toggle('open-active'), 800)
-  }
+  handleClick = e => {
+    const element = e.currentTarget;
+    element.classList.toggle('open');
+    setTimeout(() => element.classList.toggle('open-active'), 800);
+  };
 
   renderPanels = () => {
     const data = [
-      {first: 'Hey', second: 'Lets', third: 'Dance' },
-      {first: 'Give', second: 'Take', third: 'Receive' },
-      {first: 'Experience', second: 'It', third: 'Today' },
-      {first: 'Give', second: 'All', third: 'You can' },
-      {first: 'Life', second: 'In', third: 'Motion' },
-     ]
-     return data.map((panel, i) => {
-       return(
-         <div key={i} className={`panel panel${i+1}`} onClick={this.handleClick}>
-           <p>{panel.first}</p>
-           <p>{panel.second}</p>
-           <p>{panel.third}</p>
-         </div>
-       )
-     })
-  }
+      { first: 'Hey', second: 'Lets', third: 'Dance' },
+      { first: 'Give', second: 'Take', third: 'Receive' },
+      { first: 'Experience', second: 'It', third: 'Today' },
+      { first: 'Give', second: 'All', third: 'You can' },
+      { first: 'Life', second: 'In', third: 'Motion' }
+    ];
+    return data.map((panel, i) => {
+      return (
+        <div
+          key={i}
+          className={`panel panel${i + 1}`}
+          onClick={this.handleClick}
+        >
+          <p>{panel.first}</p>
+          <p>{panel.second}</p>
+          <p>{panel.third}</p>
+        </div>
+      );
+    });
+  };
 
   render() {
     return (
       <Wrapper>
         <GoBack />
-        <div className="panels">
-          {this.renderPanels()}
-        </div>
+        <div className="panels">{this.renderPanels()}</div>
       </Wrapper>
     );
   }
