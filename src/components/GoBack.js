@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   padding: 3% 0 0 3%;
   position: absolute;
   color: white;
+  text-shadow: 1px 3px 5px
   i{
     color: white;
     text-decoration: none;

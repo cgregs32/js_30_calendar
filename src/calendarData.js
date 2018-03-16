@@ -3,6 +3,7 @@ import drums from './images/drums.png'
 import variables from './images/variables.png'
 import cardio1 from './images/cardio1.png'
 import flex from './images/flex.png'
+import canvas from './images/canvas.png'
 
 const calendaData = [
   {
@@ -24,6 +25,10 @@ const calendaData = [
   {
       link: '/flex',
       image: flex
+  },
+  {
+      link: '/canvas',
+      image: canvas
   },
 ];
 

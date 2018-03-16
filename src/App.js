@@ -6,6 +6,7 @@ import Clock from './components/2_Clock';
 import Variables from './components/3_Variables';
 import Cardio1 from './components/4_Cardio1';
 import Flex from './components/5_Flex';
+import Canvas from './components/8_Canvas';
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
         <Route exact path="/variables" component={Variables} />
         <Route exact path="/cardio1" component={Cardio1} />
         <Route exact path="/flex" component={Flex} />
+        <Route exact path="/canvas" component={Canvas} />
       </Switch>
     );
   }
