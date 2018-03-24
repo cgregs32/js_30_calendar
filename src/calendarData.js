@@ -30,6 +30,10 @@ const calendaData = [
       link: '/canvas',
       image: canvas
   },
+  {
+      link: '/dev',
+      image: ''
+  },
 ];
 
 export default calendaData;
